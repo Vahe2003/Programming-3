@@ -1,3 +1,25 @@
+var express = require('express');
+var app = express();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
+app.use(express.static("."));
+app.get('/', function (req, res) {
+   res.redirect('index.html');
+});
+server.listen(3000);
+
+io.on('connection', function (socket) {
+    for(var i in messages) {
+      io.sockets.emit("display message", messages[i]);
+    }
+    socket.on("send message", function (data) {
+        messages.push(data);
+        io.sockets.emit("display message", data);
+    });
+ });
+ 
+
 function genMatrix(w, h) {
     var matrix = [];
     for(var y = 0; y < h; y++) {
@@ -17,14 +39,14 @@ function genMatrix(w, h) {
 var matrix;
 var w = 30;
 var h = 30;
-var side = 24;
 var grassArr = [], xotakerArr = [], gishatichArr = [];
+
+var Grass = require("./grass.js");
+var Xotaker = require("./eatgrass.js");
+var Gishatich = require("./predator.js")
 
 function setup() {
     matrix = genMatrix(w, h);
-    createCanvas(side * w, side * h);
-    background("#acacac");
-    frameRate(5);
     for(var y in matrix) {
         for(var x in matrix[y]) {
             if(matrix[y][x] == 1) {
@@ -41,7 +63,6 @@ function setup() {
 }
 
 function draw() {
-    background("#acacac");
     for(var y in matrix) {
         for(var x in matrix[y]) {
             if(matrix[y][x] == 0) {
@@ -59,7 +80,7 @@ function draw() {
             rect(x * side, y * side, side, side);
         }
     }
-
+function draw(){
     for(var i in grassArr) {
         grassArr[i].mul();
     }
@@ -77,3 +98,5 @@ function draw() {
     }
 
 }
+}
+setInterval(draw,20)

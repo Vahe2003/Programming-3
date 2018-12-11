@@ -1,3 +1,5 @@
+var LivingCreature = require("./LivingCreatures")
+
 class Gishatich extends LivingCreature{
     constructor(x, y, index) {
         super(x,y,index);
