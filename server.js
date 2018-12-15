@@ -6,13 +6,15 @@ var io = require('socket.io')(server);
 var Grass = require("./grass.js");
 var Xotaker = require("./eatgrass.js");
 var Gishatich = require("./predator.js")
- 
+
 app.use(express.static("."));
 app.get('/', function (req, res) {
     res.redirect('index.html');
 });
 server.listen(3000);
 console.log("server is listening")
+
+
 
 function genMatrix(w, h) {
     var matrix = [];
@@ -35,7 +37,7 @@ var w = 30;
 var h = 30;
 var grassArr = [], xotakerArr = [], gishatichArr = [];
 
-
+ 
 
 function setup() {
     matrix = genMatrix(w, h);
@@ -53,7 +55,7 @@ function setup() {
         }
     }
 }
-function draw() {
+function drawServer(matrix) {
     for (var i in grassArr) {
         grassArr[i].mul();
     }
@@ -69,5 +71,6 @@ function draw() {
         gishatichArr[i].utel();
         gishatichArr[i].mahanal();
     }
+    io.sockets.emit("matrix",matrix)
 }
-setInterval(draw, 20)
+setInterval(drawServer,20)

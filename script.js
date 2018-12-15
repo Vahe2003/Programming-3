@@ -1,10 +1,13 @@
+var socket = io();
+
+
 function setup() {
     createCanvas(25* 30, 25 * 30);
     background("#acacac");
     frameRate(5);
 }
 
-function draw(matrix) {
+function drawMatrix(matrix) {
     background("#acacac");
     for(var y in matrix) {
         for(var x in matrix[y]) {
@@ -24,3 +27,6 @@ function draw(matrix) {
         }
     }
 }
+
+
+socket.on("matrix",drawMatrix)
