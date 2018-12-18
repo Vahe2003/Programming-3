@@ -140,6 +140,7 @@ app.get('/', function (req, res) {
   res.redirect('index.html');
 });
 server.listen(3000);
+console.log("Server is listening 3000")
 
 global.grassArr = [];
 global.xotakerArr = [];
@@ -269,7 +270,7 @@ setInterval(function () {
 
     + "\n\nHivand xoter" + '-' + hivandXoter + "\nHivand tsarer" + '-' + hivandTsarer + "\nHivand xotakerner" + '-' + hivandXotakerner
     + "\nHivand gishatichner" + '-' + hivandGishatichner + "\nHivand mardik" + '-' + hivandMardik
-    + "\nHivand zinvorner" + '-' + hivandZinvorner;
+    + "\nHivand zinvorner" + '-' + hivandZinvorner
 
   fs.writeFileSync(file, text);
 }, 1000)
