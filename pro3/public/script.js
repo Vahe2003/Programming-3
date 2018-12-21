@@ -8,49 +8,59 @@ var side = 20;
 
 // matrix[0].length * side + 1, matrix.length * side + 1
 
-function setup() {
+function setup()
+{
     frameRate(fr);
-    createCanvas(700, 700);
+    createCanvas(1001, 1001);
     background('#acacac');
 }
-
-socket.on('send matrix', function (matrix, weather) {
+    
+socket.on('send matrix', function(matrix, weather) 
+{
     matrix2 = matrix;
     info_weather = weather;
-
-    for (var y = 0; y < matrix2.length; y++) {
-        for (var x = 0; x < matrix2[y].length; x++) {
+    
+    for (var y = 0; y < matrix2.length; y++) 
+    {
+        for (var x = 0; x < matrix2[y].length; x++) 
+        {
             if (matrix2[y][x] == 0) //datark vandak
             {
-                if (info_weather == 'winter') {
+                if(info_weather == 'winter')
+                {
                     fill("white");
                     rect(x * side, y * side, side, side);
                 }
 
-                else {
+                else
+                {
                     fill("#acacac");
-                    rect(x * side, y * side, side, side);
+                    rect(x * side, y * side, side, side); 
                 }
             }
 
             else if (matrix2[y][x] == 1) //xot
             {
-                if (info_weather == 'spring') {
+                if(info_weather == 'spring')
+                {
                     fill("#30ff30");
                     rect(x * side, y * side, side, side);
                 }
 
-                if (info_weather == 'summer') {
+                if(info_weather == 'summer')
+                {
                     fill("#008000");
                     rect(x * side, y * side, side, side);
                 }
 
-                if (info_weather == 'autumn') {
+                if(info_weather == 'autumn')
+                {
                     fill("#c8d123");
                     rect(x * side, y * side, side, side);
                 }
 
-                if (info_weather == 'winter') {
+                if(info_weather == 'winter')
+                {
                     fill("#e0ffe0");
                     rect(x * side, y * side, side, side);
                 }
@@ -58,67 +68,53 @@ socket.on('send matrix', function (matrix, weather) {
 
             else if (matrix2[y][x] == 2) //xotaker_arakan
             {
-                fill("yellow");
+                fill("#aaad18");
                 rect(x * side, y * side, side, side);
             }
-
+            
             else if (matrix2[y][x] == 2.5) //xotaker_igakan
             {
-                fill("#fa00ff");
+                fill("#f9ff00");
                 rect(x * side, y * side, side, side);
             }
 
             else if (matrix2[y][x] == 3) //gishatich_arakan
             {
-                fill("#ff5000");
+                fill("#911212");
                 rect(x * side, y * side, side, side);
             }
 
             else if (matrix2[y][x] == 3.5) //gishatich_igakan
             {
-                fill("#9825ed");
+                fill("#ff0000");
                 rect(x * side, y * side, side, side);
             }
 
             else if (matrix2[y][x] == 4) //mard_arakan
             {
-                fill("#840000");
+                fill("#000000");
                 rect(x * side, y * side, side, side);
             }
 
             else if (matrix2[y][x] == 4.5) //mard_igakan
             {
-                fill("#54078c");
+                fill("#ffffff");
                 rect(x * side, y * side, side, side);
             }
-
-            else if (matrix2[y][x] == 5) //tree
+            else if (matrix2[y][x] == 5) //trchun_arakan
             {
-                fill("brown");
+                fill("#3d258e");
+                rect(x * side, y * side, side, side);
+            }
+            else if (matrix2[y][x] == 5.5) //trchun_igakan
+            {
+                fill("#3a00ff");
                 rect(x * side, y * side, side, side);
             }
 
             else if (matrix2[y][x] == 8) //virus
             {
-                fill("black");
-                rect(x * side, y * side, side, side);
-            }
-
-            else if (matrix2[y][x] == 9) //mutant
-            {
-                fill("red");
-                rect(x * side, y * side, side, side);
-            }
-
-            else if (matrix2[y][x] == 10) //virus_mutant
-            {
-                fill("#162118");
-                rect(x * side, y * side, side, side);
-            }
-
-            else if (matrix2[y][x] == 11) //solider
-            {
-                fill("blue");
+                fill("#f8b3f9");
                 rect(x * side, y * side, side, side);
             }
         }

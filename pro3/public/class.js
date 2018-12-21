@@ -1,4 +1,4 @@
-module.exports = class Class10 //done
+module.exports = class Characters //done
 {
     constructor(x, y) //done
     {
@@ -9,7 +9,7 @@ module.exports = class Class10 //done
         this.virus_time = 0;
     }
 
-    yntrelVandak(ch) //done
+    ChooseCell(ch) //done
     {
         var found = [];
 
