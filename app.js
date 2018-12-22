@@ -9,8 +9,8 @@ global.qanak = 50;
 
 global.xotakerQanak = 400;
 global.gishatichQanak = 150;
-global.mardQanak = 30;
-global.trchuneriQanak = 100;
+global.mardQanak = 50;
+global.trchunQanak = 100;
 
 function random(max) 
 {
@@ -101,7 +101,7 @@ for (var a = 0; a < qanak; ++a)
       }
     }
     var i4 = 0;
-    while (i4 < gishatichQanak)
+    while (i4 < trchunQanak)
     {
       var x = getRandomNum(qanak);
       var y = getRandomNum(qanak);
@@ -214,14 +214,14 @@ for (var y = 0; y < matrix.length; ++y)
         if (matrix[y][x] == 5) 
         {
             var trchun = new Trchun(x,y);
-            mardArr.push(trchun);
+            trchunArr.push(trchun);
             trchun.ser = 1;
         }
 
         if (matrix[y][x] == 5.5) 
         {
             var trchun = new Trchun(x,y);
-            mardArr.push(trchun);
+            trchunArr.push(trchun);
             trchun.ser = 2;
         }
         if (matrix[y][x] == 8) 
@@ -270,21 +270,23 @@ setInterval(function ()
           }
       }
   }
-}, 30000)
+}, 20000)
 
 setInterval(function () 
 {
   global.file = "data.json"
   global.text = "Xoteri qanak" + '-' + grassArr.length + "\nXotakernei qanak" + '-' + xotakerArr.length + "\nGishatichneri qanak"
                 + '-' + gishatichArr.length + "\nMardik" + '-' + mardArr.length
-                + "\nVirusner" + '-' + virusArr.length
+                + "\nVirusner" + '-' + virusArr.length + "\nTrchunneri qanak"
+                + '-' + trchunArr.length
 
                 + "\nNor xoter" + '-' + norXoter + "\nNor xotakerner" + '-' + norXotakerner
                 + "\nNor gishatichner" + '-' + norGishatichner + "\nNor mardik" + '-' + norMardik
                 + "\nNor virusner" + '-' + norVirusner
 
                 + "\nHivand xoter" + '-' + hivandXoter + "\nHivand xotakerner" + '-' + hivandXotakerner
-                + "\nHivand gishatichner" + '-' + hivandGishatichner + "\nHivand mardik" + '-' + hivandMardik;
+                + "\nHivand gishatichner" + '-' + hivandGishatichner + "\nHivand mardik" + '-' + hivandMardik
+                + "\nHivand trchun" + '-' + hivandTrchunner;
 
   fs.writeFileSync(file, text);
 }, 1000)

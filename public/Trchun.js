@@ -67,11 +67,11 @@ module.exports = class Trchun extends global.Characters //done
                 var nory = norVandak[1];
 
                 if (this.ser == 1) {
-                    matrix[nory][norx] = 3;
+                    matrix[nory][norx] = 5;
                 }
 
                 else {
-                    matrix[nory][norx] = 3.5;
+                    matrix[nory][norx] = 5.5;
                 }
 
                 this.x = norx;
@@ -100,11 +100,11 @@ module.exports = class Trchun extends global.Characters //done
                 this.y = nory;
 
                 if (this.ser == 1) {
-                    matrix[nory][norx] = 3;
+                    matrix[nory][norx] = 5;
                 }
 
                 else {
-                    matrix[nory][norx] = 3.5;
+                    matrix[nory][norx] = 5.5;
                 }
 
                 this.energy -= 1;
@@ -185,11 +185,11 @@ module.exports = class Trchun extends global.Characters //done
                         var r = Math.floor(this.getRandomNum(5));
 
                         if (r >= 1) {
-                            matrix[nory][norx] = 3;
+                            matrix[nory][norx] = 5;
                         }
 
                         else {
-                            matrix[nory][norx] = 3.5;
+                            matrix[nory][norx] = 5.5;
                         }
 
                         var norTrchun = new Trchun(norx, nory);
@@ -197,7 +197,7 @@ module.exports = class Trchun extends global.Characters //done
 
                         norTrchunner++;
 
-                        if (matrix[nory][norx] == 3) {
+                        if (matrix[nory][norx] == 5) {
                             norTrchun.ser = 1;
                         }
 
@@ -215,11 +215,11 @@ module.exports = class Trchun extends global.Characters //done
                         var r = Math.floor(this.getRandomNum(5));
 
                         if (r >= 1) {
-                            matrix[nory][norx] = 3;
+                            matrix[nory][norx] = 5;
                         }
 
                         else {
-                            matrix[nory][norx] = 3.5;
+                            matrix[nory][norx] = 5.5;
                         }
 
                         var norTrchun = new Trchun(norx, nory);
@@ -227,7 +227,7 @@ module.exports = class Trchun extends global.Characters //done
 
                         norTrchunner++;
 
-                        if (matrix[nory][norx] == 3) {
+                        if (matrix[nory][norx] == 5) {
                             norTrchun.ser = 1;
                         }
 
@@ -243,11 +243,11 @@ module.exports = class Trchun extends global.Characters //done
                                 var r2 = Math.floor(this.getRandomNum(5));
 
                                 if (r2 >= 1) {
-                                    matrix[nory][norx] = 3;
+                                    matrix[nory][norx] = 5;
                                 }
 
                                 else {
-                                    matrix[nory][norx] = 3.5;
+                                    matrix[nory][norx] = 5.5;
                                 }
 
                                 var norTrchun2 = new Trchun(norx, nory);
@@ -255,7 +255,7 @@ module.exports = class Trchun extends global.Characters //done
 
                                 norTrchunner++;
 
-                                if (matrix[nory][norx] == 3) {
+                                if (matrix[nory][norx] == 5) {
                                     norTrchun2.ser = 1;
                                 }
 
@@ -277,11 +277,11 @@ module.exports = class Trchun extends global.Characters //done
                         var r = Math.floor(this.getRandomNum(5));
 
                         if (r >= 1) {
-                            matrix[nory][norx] = 3;
+                            matrix[nory][norx] = 5;
                         }
 
                         else {
-                            matrix[nory][norx] = 3.5;
+                            matrix[nory][norx] = 5.5;
                         }
 
                         var norTrchun = new Trchun(norx, nory);
@@ -289,7 +289,7 @@ module.exports = class Trchun extends global.Characters //done
 
                         norTrchunner++;
 
-                        if (matrix[nory][norx] == 3) {
+                        if (matrix[nory][norx] == 5) {
                             norTrchun.ser = 1;
                         }
 
@@ -314,11 +314,11 @@ module.exports = class Trchun extends global.Characters //done
                         var r = Math.floor(this.getRandomNum(5));
 
                         if (r >= 1) {
-                            matrix[nory][norx] = 3;
+                            matrix[nory][norx] = 5;
                         }
 
                         else {
-                            matrix[nory][norx] = 3.5;
+                            matrix[nory][norx] = 5.5;
                         }
 
                         var norTrchun = new Trchun(norx, nory);
@@ -326,7 +326,7 @@ module.exports = class Trchun extends global.Characters //done
 
                         norTrchunner++;
 
-                        if (matrix[nory][norx] == 3) {
+                        if (matrix[nory][norx] == 5) {
                             norTrchun.ser = 1;
                         }
 
@@ -349,11 +349,11 @@ module.exports = class Trchun extends global.Characters //done
                                 var r2 = Math.floor(this.getRandomNum(5));
 
                                 if (r2 >= 1) {
-                                    matrix[nory][norx] = 3;
+                                    matrix[nory][norx] = 5;
                                 }
 
                                 else {
-                                    matrix[nory][norx] = 3.5;
+                                    matrix[nory][norx] = 5.5;
                                 }
 
                                 var norTrchun2 = new Xotaker(norx, nory);
@@ -361,7 +361,7 @@ module.exports = class Trchun extends global.Characters //done
 
                                 norTrchunner++;
 
-                                if (matrix[nory][norx] == 3) {
+                                if (matrix[nory][norx] == 5) {
                                     norTrchun2.ser = 1;
                                 }
 

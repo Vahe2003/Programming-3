@@ -3,7 +3,7 @@ module.exports = class Gishatich extends global.Characters //done
     constructor(x, y) {
         super(x, y)
         this.yntaniKendani = false;
-        this.energy = 25;
+        this.energy = 30;
         this.axorjak = 0;
         this.ser = 0;
         this.bazmacox = false;

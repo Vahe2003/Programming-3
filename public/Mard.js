@@ -148,8 +148,6 @@ module.exports = class Mard extends global.Characters //done
             var gishatich2 = this.ChooseCell(3.5);
             var norVandak6 = this.getRandomArr(gishatich2);
 
-            var tree = this.ChooseCell(5);
-            var norVandak4 = this.getRandomArr(tree);
 
             if (norVandak3 || norVandak6) {
                 for (var i in gishatichArr) {
@@ -157,42 +155,6 @@ module.exports = class Mard extends global.Characters //done
                         var gishatich = gishatichArr[i];
                         yntaniKendaniArr.push(gishatich);
                     }
-                }
-            }
-
-            if (this.wood < 3 && norVandak4) {
-                this.axorjak = 0;
-                this.wood += 3;
-
-                matrix[this.y][this.x] = 0;
-                var norx = norVandak4[0];
-                var nory = norVandak4[1];
-
-                if (this.ser == 1) {
-                    matrix[nory][norx] = 4;
-                }
-
-                else {
-                    matrix[nory][norx] = 4.5;
-                }
-
-                this.x = norx;
-                this.y = nory;
-
-                if (this.wood > 10) {
-                    this.wood = 10;
-                }
-
-                for (var i in treeArr) {
-                    if (this.x == treeArr[i].x && this.y == treeArr[i].y) {
-                        treeArr.splice(i, 1);
-                    }
-                }
-
-                this.energy -= 2;
-
-                if (this.energy <= 0) {
-                    this.energy_zero = true;
                 }
             }
 

@@ -103,18 +103,18 @@ socket.on('send matrix', function(matrix, weather)
             }
             else if (matrix2[y][x] == 5) //trchun_arakan
             {
-                fill("#3d258e");
+                fill("#141d87");
                 rect(x * side, y * side, side, side);
             }
             else if (matrix2[y][x] == 5.5) //trchun_igakan
             {
-                fill("#3a00ff");
+                fill("#0013ff");
                 rect(x * side, y * side, side, side);
             }
 
             else if (matrix2[y][x] == 8) //virus
             {
-                fill("#f8b3f9");
+                fill("#6d3232");
                 rect(x * side, y * side, side, side);
             }
         }
