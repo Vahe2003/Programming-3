@@ -3,7 +3,7 @@ module.exports = class Gishatich extends global.Characters //done
     constructor(x, y) {
         super(x, y)
         this.yntaniKendani = false;
-        this.energy = 30;
+        this.energy = 10;
         this.axorjak = 0;
         this.ser = 0;
         this.bazmacox = false;
@@ -433,7 +433,7 @@ module.exports = class Gishatich extends global.Characters //done
                         }
                     }
 
-                    if (this.axorjak >= 7 && this.ser == 1) {
+                    if (this.axorjak >= 5 && this.ser == 1) {
                         this.bazmacox = true;
                         this.axorjak = 0;
                         this.bazmanal();

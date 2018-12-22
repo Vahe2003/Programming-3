@@ -3,7 +3,7 @@ module.exports = class Xotaker extends global.Characters //done
     constructor(x, y) 
     {
         super(x, y)
-        this.energy = 8;
+        this.energy = 20;
         this.axorjak = 0;
         this.ser = 0;
         this.bazmacox = false;
@@ -417,22 +417,22 @@ module.exports = class Xotaker extends global.Characters //done
 
                 if(weather == 'spring')
                 {
-                    score_plus = 2;
+                    score_plus = 2.5;
                 }
 
                 else if(weather == 'summer')
                 {
-                    score_plus = 3;
+                    score_plus = 3.5;
                 }
 
                 else if(weather == 'autumn')
                 {
-                    score_plus = 1;
+                    score_plus = 1.5;
                 }
 
                 else if(weather == 'winter')
                 {
-                    score_plus = 0.5;
+                    score_plus = 1;
                 }
 
                 this.energy += score_plus;
@@ -454,9 +454,9 @@ module.exports = class Xotaker extends global.Characters //done
                 this.x = norx;
                 this.y = nory;
 
-                if (this.energy > 15) 
+                if (this.energy > 10) 
                 {
-                    this.energy = 15;
+                    this.energy = 10;
                 }
 
                 for (var i in grassArr) 
@@ -467,7 +467,7 @@ module.exports = class Xotaker extends global.Characters //done
                     }
                 }
 
-                if(this.axorjak >= 5 && this.ser == 1)
+                if(this.axorjak >= 30 && this.ser == 1)
                 {
                     this.bazmacox = true;
                     this.axorjak = 0;
@@ -585,7 +585,7 @@ module.exports = class Xotaker extends global.Characters //done
             {
                 if (this.x == xotakerArr[i].x && this.y == xotakerArr[i].y) 
                 {
-                    matrix[this.y][this.x] = 0;
+                    matrix[this.y][this.x] = 8;
                     xotakerArr.splice(i, 1);
                     break;
                 }

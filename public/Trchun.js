@@ -387,65 +387,12 @@ module.exports = class Trchun extends global.Characters //done
     {
         if (this.hivandutyun_mahacu == false && weather != 'winter') {
             if (this.yntaniKendani == false) {
-                var xotaker = this.ChooseCell(2);
-                var norVandak = this.getRandomArr(xotaker);
-
-                var xotaker2 = this.ChooseCell(2.5);
-                var norVandak3 = this.getRandomArr(xotaker2);
 
                 var mard = this.ChooseCell(4.5);
                 var norVandak2 = this.getRandomArr(mard);
 
-                if (norVandak || norVandak3) {
-                    this.axorjak += 1;
-                    this.energy += 2;
 
-                    matrix[this.y][this.x] = 0;
-
-                    if (norVandak) {
-                        var norx = norVandak[0];
-                        var nory = norVandak[1];
-                    }
-
-                    else if (norVandak3) {
-                        var norx = norVandak3[0];
-                        var nory = norVandak3[1];
-                    }
-
-                    if (this.ser == 1) {
-                        matrix[nory][norx] = 3;
-                    }
-
-                    else {
-                        matrix[nory][norx] = 3.5;
-                    }
-
-                    this.x = norx;
-                    this.y = nory;
-
-                    if (this.energy > 25) {
-                        this.energy = 25;
-                    }
-
-                    for (var i in xotakerArr) {
-                        if (this.x == xotakerArr[i].x && this.y == xotakerArr[i].y) {
-                            xotakerArr.splice(i, 1);
-                        }
-                    }
-
-                    if (this.axorjak >= 7 && this.ser == 1) {
-                        this.bazmacox = true;
-                        this.axorjak = 0;
-                        this.bazmanal();
-                    }
-
-                    else if (this.axorjak >= 7 && this.ser == 2) {
-                        this.bazmacox = true;
-                        this.axorjak = 0;
-                    }
-                }
-
-                else if (norVandak2) {
+                    if (norVandak2) {
                     this.axorjak += 1;
                     this.energy += 3;
 

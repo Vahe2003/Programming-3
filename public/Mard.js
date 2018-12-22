@@ -781,7 +781,6 @@ module.exports = class Mard extends global.Characters //done
                 if (this.x == mardArr[i].x && this.y == mardArr[i].y) {
                     matrix[this.y][this.x] = 0;
                     mardArr.splice(i, 1);
-                    break;
                 }
             }
         }

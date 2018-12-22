@@ -1,16 +1,20 @@
-Xoteri qanak-2648
-Xotakernei qanak-0
-Gishatichneri qanak-0
-Mardik-30
-Virusner-0
-Trchunneri qanak-0
-Nor xoter-6072
-Nor xotakerner-0
-Nor gishatichner-0
-Nor mardik-0
-Nor virusner-0
-Hivand xoter-314
-Hivand xotakerner-0
-Hivand gishatichner-0
-Hivand mardik-8
-Hivand trchun-0
+{
+   "Xoteri qanak": 5852,
+   "Xotakernei qanak": 1,
+   "Gishatichneri qanak": 0,
+   "Mardik": 32,
+   "Virusner": 0,
+   "Trchunner": 0,
+   "Nor xoter": 10064,
+   "Nor xotakerner": 0,
+   "Nor gishatichner": 0,
+   "Nor mardik": 0,
+   "Nor virusner": 0,
+   "Nor trchunner": 0,
+   "Trchunneri qanak": 0,
+   "Hivand xoter": 815,
+   "Hivand xotakerner": 0,
+   "Hivand gishatichner": 0,
+   "Hivand mardik": 10,
+   "Hivand trchun": 0
+}

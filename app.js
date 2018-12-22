@@ -5,9 +5,9 @@ var io = require('socket.io')(server);
 var fs = require('fs');
 
 global.matrix = [];
-global.qanak = 50;
+global.qanak = 75;
 
-global.xotakerQanak = 400;
+global.xotakerQanak = 500;
 global.gishatichQanak = 150;
 global.mardQanak = 50;
 global.trchunQanak = 100;
@@ -138,6 +138,7 @@ app.get('/', function (req, res) {
 res.redirect('index.html');
 });
 server.listen(3000);
+console.log("Server is listening 3000");
 
 global.grassArr = [];
 global.xotakerArr = [];
@@ -273,23 +274,20 @@ setInterval(function ()
 }, 20000)
 
 setInterval(function () 
-{
-  global.file = "data.json"
-  global.text = "Xoteri qanak" + '-' + grassArr.length + "\nXotakernei qanak" + '-' + xotakerArr.length + "\nGishatichneri qanak"
-                + '-' + gishatichArr.length + "\nMardik" + '-' + mardArr.length
-                + "\nVirusner" + '-' + virusArr.length + "\nTrchunneri qanak"
-                + '-' + trchunArr.length
+    {
+        global.file = "data.json"
+        
+        var obj = 
+        {
+            'Xoteri qanak' : grassArr.length, 'Xotakernei qanak' : xotakerArr.length, 'Gishatichneri qanak' : gishatichArr.length, 'Mardik' : mardArr.length, 'Virusner' : virusArr.length,'Trchunner' : trchunArr.length,
+            'Nor xoter' : norXoter,'Nor xotakerner' : norXotakerner, 'Nor gishatichner' : norGishatichner, 'Nor mardik' : norMardik, 'Nor virusner' : norVirusner,'Nor trchunner' : norTrchunner,
+            'Trchunneri qanak' : trchunArr.length,'Hivand xoter' : hivandXoter,'Hivand xotakerner' : hivandXotakerner, 'Hivand gishatichner' : hivandGishatichner, 
+            'Hivand mardik' : hivandMardik,'Hivand trchun' : hivandTrchunner
+        }
 
-                + "\nNor xoter" + '-' + norXoter + "\nNor xotakerner" + '-' + norXotakerner
-                + "\nNor gishatichner" + '-' + norGishatichner + "\nNor mardik" + '-' + norMardik
-                + "\nNor virusner" + '-' + norVirusner
-
-                + "\nHivand xoter" + '-' + hivandXoter + "\nHivand xotakerner" + '-' + hivandXotakerner
-                + "\nHivand gishatichner" + '-' + hivandGishatichner + "\nHivand mardik" + '-' + hivandMardik
-                + "\nHivand trchun" + '-' + hivandTrchunner;
-
-  fs.writeFileSync(file, text);
-}, 1000)
+        var myJSON = JSON.stringify(obj, null, 3);
+        fs.writeFile(file, myJSON);
+    }, 1000)
 
 setInterval(function (matrix) 
 {    

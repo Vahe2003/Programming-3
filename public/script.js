@@ -43,13 +43,13 @@ socket.on('send matrix', function(matrix, weather)
             {
                 if(info_weather == 'spring')
                 {
-                    fill("#30ff30");
+                    fill("#008000")
                     rect(x * side, y * side, side, side);
                 }
 
                 if(info_weather == 'summer')
                 {
-                    fill("#008000");
+                    fill("#30ff30");
                     rect(x * side, y * side, side, side);
                 }
 
